@@ -1,8 +1,8 @@
 # CrewAI + Ollama Multi-Agent Report Generator
 
-A Streamlit application that uses three sequential CrewAI agents with a local
+A Streamlit application that uses three sequential CrewAI agents with the local
 Ollama `qwen3:1.7b` model to research a topic and generate a reviewed Markdown
-report.
+report. The project separates UI, configuration, agents, tasks, and crew setup.
 
 ## Prerequisites
 
@@ -38,3 +38,12 @@ report.
 
 The application uses Ollama at `http://localhost:11434`. Enter a topic in the
 browser UI, generate the report, and download the final Markdown result.
+
+## Project Structure
+
+- `app.py` - Streamlit interface and error handling
+- `config.py` - Ollama model and server configuration
+- `agents.py` - Researcher, Writer, and Reviewer agents
+- `tasks.py` - Dedicated tasks and context chaining
+- `crew.py` - Sequential CrewAI crew construction
+- `requirements.txt` - Python dependencies
